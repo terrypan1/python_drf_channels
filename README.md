@@ -34,9 +34,7 @@ class InfoView(APIView):
 ### 8.pip install ipython
 - pip install django-extensions
 INSTALLED_APPS = [
-    # ... 其他已安裝的應用 ...
     'django_extensions',
-    # ... 其他已安裝的應用 ...
 ]
 - python manage.py shell_plus or python manage.py shell 都可以使用
 ### 9.pip install coreapi
@@ -63,8 +61,9 @@ INSTALLED_APPS = [
 - celery -A celery_tasks.main worker -l info --pool=solo
 - celery -A celery_tasks.main beat -l info
 
-### 12.pip install drf-yasg
-
+### 12.pip install drf-spectacular (pip install drf-yasg)
+- https://drf-spectacular.readthedocs.io/en/latest/index.html
+- python manage.py spectacular --file schema.yml
 ### 13.pip install black pip install flake8
 - editor.defaultFormatter: null: 此設定表示將不會設置任何預設格式化程式。當進行程式碼格式化時，使用者需要手動選擇或設置所需的格式化程式。
 - editor.formatOnSave: true: 啟用此設定將使 VS Code 在儲存文件時自動進行程式碼格式化。這可以確保程式碼的一致性和清晰度。
@@ -72,6 +71,8 @@ INSTALLED_APPS = [
 - python.formatting.blackArgs: ["--line-length", "119"]: 設定 Black 格式化程式的參數。在這個例子中，指定了一個參數 --line-length，並設置其值為 119，這表示 Black 將會將程式碼行的最大長度設置為 119 個字元。
 - [python]: 此設定是針對 Python 文件的特定設定區段。
 - editor.codeActionsOnSave: {"source.organizeImports": true}: 啟用此設定將使 VS Code 在儲存 Python 文件時自動組織導入語句。這將自動對文件中的導入進行排序和清理，以確保其一致性和可讀性。
+### icons
+- https://fonts.google.com/icons
 ### request對象(基於drf二次封裝)
 - oop知識
 - drf請求流程
@@ -118,7 +119,6 @@ INSTALLED_APPS = [
 - Remove-Item -Recurse -Force C:\Users\User\Desktop\flask\flask_model\venv
 - python -m venv venv 
 - 重來
-
 
 ### sudo apt update
 ### sudo apt install docker-compose
